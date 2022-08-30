@@ -2,7 +2,6 @@ import React from "react";
 
 function Card(course) {
   const curCourse = course.course;
-  console.log(curCourse);
   return (
     <div className="cardElement">
       <img src={curCourse.image} className="course-img"></img>
