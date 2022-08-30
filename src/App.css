@@ -1,38 +1,51 @@
-.App {
-  text-align: center;
+.container {
+  border: 1px solid rgb(206, 204, 204);
+  padding: 12px;
+  margin: 8px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.explorCourse {
+  background-color: white;
+  padding: 8px;
+  margin: 12px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.coursesList {
+  margin: auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: flex-start;
+  gap: 10px;
+}
+.cardElement {
+  width: 100%;
+  max-width: 250px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  display: inline-block;
+  border: 1px solid rgb(178, 178, 178);
+  border-radius: 4px;
 }
 
-.App-link {
-  color: #61dafb;
+.course-title {
+  margin: 2px;
+}
+.author {
+  margin: 2px;
+  color: gray;
+}
+.price {
+  margin: 2px;
+  font-weight: bold;
+}
+.course-img {
+  width: inherit;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.rated {
+  color: goldenrod;
+  padding: 1px;
+}
+.unRated {
+  padding: 1px;
+  font-weight: bold;
 }
