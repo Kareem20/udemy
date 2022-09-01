@@ -1,6 +1,6 @@
 import React from "react";
-import Card from "./Card";
-
+import Card from "../cardComponent/Card";
+import styles from "./contentStyle.module.css";
 const coursesList = {
   title: "Top courses in Python",
   header: "Expand your career opportunities with Python",
@@ -48,7 +48,6 @@ const coursesList = {
         "https://www.pragimtech.com/wp-content/uploads/2019/03/java-script.jpg",
       price: "E£519.99",
     },
-   
   ],
 };
 
@@ -59,11 +58,11 @@ let getListOfCourses = () =>
 
 function Content() {
   return (
-    <div className="container">
+    <div className={styles.container}>
       <h1>{coursesList.header}</h1>
       <p>{coursesList.description}</p>
-      <button className="explorCourse">{coursesList.explore}</button>
-      <div className="coursesList"> {getListOfCourses()}</div>
+      <button className={styles.explorCourse}>{coursesList.explore}</button>
+      <div className={styles.coursesList}> {getListOfCourses()}</div>
     </div>
   );
 }

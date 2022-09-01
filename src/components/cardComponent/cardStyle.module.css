@@ -1,0 +1,30 @@
+.cardElement {
+  width: 100%;
+  max-width: 250px;
+  align-items: center;
+  display: inline-block;
+  border: 1px solid rgb(178, 178, 178);
+  border-radius: 4px;
+}
+.courseImg {
+  width: inherit;
+}
+.courseTitle {
+  margin: 2px;
+}
+.author {
+  margin: 2px;
+  color: gray;
+}
+.price {
+  margin: 2px;
+  font-weight: bold;
+}
+.rated {
+  color: goldenrod;
+  padding: 1px;
+}
+.unRated {
+  padding: 1px;
+  font-weight: bold;
+}
