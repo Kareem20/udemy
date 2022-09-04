@@ -1,0 +1,53 @@
+.nav {
+  display: flex;
+  width: 100%;
+  background-color: white;
+  align-items: center;
+  box-shadow: 0 8px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.navList {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+.searchBar {
+  border-radius: 20px;
+  width: 80%;
+  height: 40px;
+  margin: 2%;
+  border-width: 1px;
+  padding: 12px;
+  background-color: rgb(233, 238, 240);
+}
+.searchButton {
+  margin: 12px;
+  padding: 10px 24px;
+  border-width: 1px;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+}
+
+.menuIcon {
+  display: none;
+}
+
+/* responsive */
+@media only screen and (max-width: 1000px) {
+  .navList {
+    display: none;
+  }
+  .logoUdemy {
+    order: 2;
+  }
+  .menuIcon {
+    display: inline-block;
+    order: 1;
+    margin: 12px;
+  }
+  .nav {
+    justify-content: space-between;
+  }
+}

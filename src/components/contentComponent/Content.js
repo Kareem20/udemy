@@ -60,7 +60,7 @@ function Content() {
   return (
     <div className={styles.container}>
       <h1>{coursesList.header}</h1>
-      <p>{coursesList.description}</p>
+      <p className={styles.description}>{coursesList.description}</p>
       <button className={styles.explorCourse}>{coursesList.explore}</button>
       <div className={styles.coursesList}> {getListOfCourses()}</div>
     </div>
