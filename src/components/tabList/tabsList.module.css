@@ -1,0 +1,8 @@
+.box {
+  margin-left: 8px;
+}
+.tab {
+  text-transform: capitalize;
+  color: black;
+  font-weight: bold;
+}

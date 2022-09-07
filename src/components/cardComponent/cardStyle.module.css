@@ -1,12 +1,14 @@
 .cardElement {
   width: 100%;
   max-width: 250px;
+  max-height: 350px;
   align-items: center;
   display: inline-block;
   border: 1px solid rgb(178, 178, 178);
   border-radius: 4px;
 }
 .courseImg {
+  height: 150px;
   width: inherit;
 }
 .courseTitle {
@@ -15,6 +17,7 @@
 .author {
   margin: 2px;
   color: gray;
+  font-size: 12px;
 }
 .price {
   margin: 2px;
