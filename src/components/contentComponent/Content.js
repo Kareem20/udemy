@@ -1,35 +1,32 @@
-import React, { useState, useEffect } from "react";
+import React, { useContext } from "react";
 import Card from "../cardComponent/Card";
 import styles from "./contentStyle.module.css";
-
+import { Link } from "react-router-dom";
+import { CoursesDataContext } from "../../contexts/DataContext";
+import { SearchDataContext } from "../../contexts/SearchData";
 function Content(props) {
-  const [Post, setPosts] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const coursesData = useContext(CoursesDataContext);
+  const searchData = useContext(SearchDataContext).toLowerCase();
+  searchData.replace(/\s+/g, "");
 
-  const url = "http://localhost:3000/content/" + props.id;
-  useEffect(() => {
-    setIsLoading(true);
-    fetch(url)
-      .then((response) => response.json())
-      .then((json) => {
-        console.log("post :>> ", json);
-        setPosts(json);
-      })
-      .catch((err) => {
-        console.log(err);
-      })
-      .finally(() => {
-        setIsLoading(false);
-      });
-  }, [props.id]);
+  let data = coursesData.coursesData[props.id - 1];
+  if (data == undefined) return <></>;
 
   const getListOfCourses = (listOfCourses) =>
     listOfCourses.map((cur) => {
-      return <Card course={cur}></Card>;
+      let path = "/courses/" + cur.id;
+      let currentHeadline = cur.headline.toLowerCase();
+      currentHeadline.replace(/\s+/g, "");
+      if (currentHeadline.includes(searchData)) {
+        return (
+          <Link to={path}>
+            <Card course={cur}></Card>
+          </Link>
+        );
+      }
     });
 
   const renderContent = (cur) => {
-    console.log(cur);
     if (cur == undefined) return <></>;
     return (
       <div className={styles.container}>
@@ -44,22 +41,17 @@ function Content(props) {
   };
 
   const getCurrentTab = (id) => {
-    if (id == "1") return Post.python;
-    else if (id == "2") return Post.drawing;
-    else if (id == "3") return Post.excel;
-    else if (id == "4") return Post.javascript;
-    else if (id == "5") return Post.webDevelopment;
-    else if (id == "6") return Post.AWSCertification;
-    return Post.ds;
+    if (id == "1") return data.python;
+    else if (id == "2") return data.drawing;
+    else if (id == "3") return data.excel;
+    else if (id == "4") return data.javascript;
+    else if (id == "5") return data.webDevelopment;
+    else if (id == "6") return data.AWSCertification;
+    return data.ds;
   };
-
   return (
     <>
-      {isLoading ? (
-        <div>Loading ...</div>
-      ) : (
-        <div>{renderContent(getCurrentTab(Post.id))}</div>
-      )}
+      <div>{renderContent(getCurrentTab(data.id))}</div>
     </>
   );
 }

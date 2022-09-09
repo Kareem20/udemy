@@ -8,6 +8,16 @@
   border-radius: 4px;
 }
 .courseImg {
+  opacity: 1;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  height: 150px;
+  width: inherit;
+}
+.courseImg:hover {
+  opacity: 0.5;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
   height: 150px;
   width: inherit;
 }
@@ -31,4 +41,3 @@
   padding: 1px;
   font-weight: bold;
 }
-

@@ -1,0 +1,22 @@
+.headerBarLight {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  padding: 5px;
+  font-size: 20px;
+}
+
+.openAccordionToggleLight {
+ margin: 0%;
+}
+
+.displayText {
+  text-align: left;
+  color: black;
+}
+.accordionContainerLight {
+  padding: 8px;
+  border: 1px solid #d1d7dc;
+  background-color: #f7f9fa;
+  color: black;
+}
