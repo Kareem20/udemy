@@ -14,8 +14,8 @@ export const SetSearchTermContext = createContext();
 function App() {
   const [data, setData] = useState([]);
   const [searchData, setSearchData] = useState("");
-  const url = "http://localhost:3000/content";
-  //const url ="https://raw.githubusercontent.com/Kareem20/udemy_project_2/phase_2/data.json";
+ // const url = "http://localhost:3000/content";
+  const url ="https://raw.githubusercontent.com/Kareem20/udemy_project_2/phase_2/data.json";
   useEffect(() => {
     fetch(url)
       .then((response) => response.json())
