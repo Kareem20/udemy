@@ -8,6 +8,7 @@
   flex-wrap: wrap;
   align-items: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
 }
 img {
   width: 100%;
@@ -34,4 +35,13 @@ img {
 
 .coursesDescription p {
   font-size: 20px;
+}
+/* responsive */
+@media only screen and (max-width: 1000px) {
+  .headerBox {
+    position: relative;
+    max-width: 100%;
+    top: 0px;
+    left: 0px;
+  }
 }

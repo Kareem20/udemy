@@ -2,7 +2,6 @@ import React from "react";
 import CheckOutlinedIcon from "@mui/icons-material/CheckOutlined";
 function PopoverCard(props) {
   const course = props.course;
-  console.log(course);
   return (
     <div style={{ width: "300px", margin: "24px" }}>
       <h3>{course.title}</h3>
