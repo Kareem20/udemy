@@ -1,0 +1,8 @@
+.goalsDiv {
+  margin-top: 32px;
+  border: 1px solid rgb(206, 204, 204);
+  padding: 12px;
+}
+.goal {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

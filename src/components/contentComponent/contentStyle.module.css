@@ -1,0 +1,19 @@
+.container {
+  border: 1px solid rgb(206, 204, 204);
+  padding: 12px;
+  margin: 8px;
+}
+.explorCourse {
+  background-color: white;
+  padding: 8px;
+  margin: 12px;
+}
+.coursesList {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: flex-start;
+  gap: 8px;
+}
